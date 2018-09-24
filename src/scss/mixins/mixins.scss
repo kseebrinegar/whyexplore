@@ -1,0 +1,31 @@
+/* START .................................. MEDIA QUERIES */
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == mq-480 {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+    @if $breakpoint == mq-768 {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @if $breakpoint == mq-992 {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+    @if $breakpoint == mq-1500 {
+        @media (min-width: 1500px) {
+            @content;
+        }
+    }
+    @if $breakpoint == mq-1800 {
+        @media (min-width: 1800px) {
+            @content;
+        }
+    }
+}
+
+/* END .................................... MEDIA QUERIES */

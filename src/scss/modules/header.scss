@@ -1,0 +1,189 @@
+@import "../mixins/mixins";
+
+.header {
+    .why-explore-black-img,
+    .why-explore-white-img,
+    .menu-open-and-close-container {
+        position: fixed;
+        top: 50%;
+        z-index: 100;
+    }
+
+    .why-explore-white-img,
+    .why-explore-black-img {
+        display: block;
+        transform: translateY(-50%);
+        left: 5rem;
+        width: 3rem;
+
+        @include respond(mq-992) {
+            transform: translateY(0%);
+            top: 4rem;
+            left: 2.5rem;
+        }
+
+        @include respond(mq-768) {
+            top: 2rem;
+            left: 1rem;
+            width: 2rem;
+        }
+    }
+
+    img {
+        cursor: pointer;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .menu-open-and-close-container {
+        transform: translateY(-50%) rotate(90deg);
+        right: 5rem;
+        width: 3rem;
+
+        @include respond(mq-992) {
+            transform: translateY(0%) rotate(90deg);
+            top: 5rem;
+            right: 2.5rem;
+            width: 30px;
+        }
+
+        @include respond(mq-768) {
+            top: 2.5rem;
+            right: 1rem;
+            width: 2rem;
+        }
+    }
+
+    button {
+        cursor: pointer;
+        font-size: 1.6rem;
+        padding: 0;
+        font-weight: 900;
+        letter-spacing: 0.2rem;
+        background: transparent;
+
+        @include respond(mq-768) {
+            font-size: 12px;
+            letter-spacing: 0.1rem;
+        }
+    }
+}
+
+.site-nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background: black;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .site-nav-list-items {
+        color: white;
+        font-size: 8rem;
+        letter-spacing: 1rem;
+        width: 69.5rem;
+
+        @media (max-width: 1200px) {
+            font-size: 6.5rem;
+            width: 58rem;
+        }
+
+        @include respond(mq-992) {
+            font-size: 5rem;
+            width: 52rem;
+        }
+
+        @include respond(mq-768) {
+            font-size: 3rem;
+            width: 100%;
+            letter-spacing: 0.5rem;
+            margin-left: 5rem;
+        }
+    }
+
+    @include respond(mq-768) {
+        justify-content: left;
+    }
+
+    .site-nav-list-item {
+        margin-left: 2rem;
+    }
+
+    .site-nav-list-item-link {
+        display: flex;
+        color: white;
+        height: 100%;
+        opacity: 0;
+    }
+
+    .navLinkAnimateHome {
+        animation: navLinkAnimate 0.25s ease-in-out 0.95s forwards;
+    }
+
+    .navLinkAnimateInterviews {
+        animation: navLinkAnimate 0.25s ease-in-out 0.8s forwards;
+    }
+
+    .navLinkAnimateCourses {
+        animation: navLinkAnimate 0.25s ease-in-out 0.65s forwards;
+    }
+
+    .navLinkAnimateAbout {
+        animation: navLinkAnimate 0.25s ease-in-out 0.5s forwards;
+    }
+
+    .site-nav-list-item-link:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+
+    @keyframes navLinkAnimate {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .site-nav-list-item-line {
+        height: 1px;
+        background: white;
+        width: 0rem;
+        align-self: baseline;
+        align-self: center;
+        transition: 0.5s;
+    }
+
+    .site-nav-list-item-link:hover .site-nav-list-item-line {
+        width: 12rem;
+        transition: 0.5s;
+
+        @include respond(mq-1500) {
+            width: 15rem;
+        }
+
+        @include respond(mq-768) {
+            width: 0rem;
+        }
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.home {
+    height: 2000px;
+    width: 100%;
+}
+
+.footer {
+    height: 800px;
+    width: 100%;
+    background: black;
+}
