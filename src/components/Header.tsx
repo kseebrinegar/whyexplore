@@ -97,32 +97,37 @@ class Header extends React.Component<{}, IState> {
         };
 
         return (
-            <div className="header">
-                <Link
-                    className="why-explore-black-img"
-                    style={styles.imgBlack}
-                    to={"/"}
-                >
-                    <img src="/img/why-explore-black.png" />
-                </Link>
+            <header>
+                <div className="header">
+                    <Link
+                        className="why-explore-black-img"
+                        style={styles.imgBlack}
+                        to={"/"}
+                    >
+                        <img src="/img/why-explore-black.png" />
+                    </Link>
 
-                <Link
-                    className="why-explore-white-img"
-                    style={styles.imgWhite}
-                    to={"/"}
-                >
-                    <img src="/img/p.png" />
-                </Link>
+                    <Link
+                        className="why-explore-white-img"
+                        style={styles.imgWhite}
+                        to={"/"}
+                    >
+                        <img src="/img/p.png" />
+                    </Link>
 
-                <div className="menu-open-and-close-container">
-                    <button onClick={this.toggleSiteNav} style={styles.button}>
-                        MENU
-                    </button>
+                    <div className="menu-open-and-close-container">
+                        <button
+                            onClick={this.toggleSiteNav}
+                            style={styles.button}
+                        >
+                            MENU
+                        </button>
+                    </div>
+                    <nav className="site-nav" style={styles.siteNav}>
+                        <ul>{this.renderNavList()}</ul>
+                    </nav>
                 </div>
-                <nav className="site-nav" style={styles.siteNav}>
-                    <ul>{this.renderNavList()}</ul>
-                </nav>
-            </div>
+            </header>
         );
     }
 }

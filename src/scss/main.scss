@@ -1,4 +1,6 @@
+@import "./vars/vars";
 @import "./mixins/mixins";
 
-@import "./modules/header";
 @import "./base/base";
+@import "./modules/header";
+@import "./modules/home";

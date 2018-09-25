@@ -1,0 +1,163 @@
+@import "../mixins/mixins";
+
+.home {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    .details {
+        position: absolute;
+        top: 50%;
+        transform: translate(-40%, -50%);
+
+        .persons-profession {
+            font-size: 2.4rem;
+            font-family: "Fanwood Text", serif;
+        }
+    }
+}
+
+.read-more {
+    background: black;
+    height: 5.5rem;
+    width: 25rem;
+    position: absolute;
+    top: 85%;
+    right: 0%;
+    transform: translate(40%, -50%);
+
+    .read-more-line {
+        width: 18.75rem;
+        height: 1px;
+        background: white;
+        position: absolute;
+        top: 50%;
+        left: -35%;
+        transform: translateY(-50%, 50%);
+    }
+
+    p {
+        position: relative;
+        left: 45%;
+        top: 50%;
+        transform: translate(0%, -50%);
+        color: white;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        font-size: 1.4rem;
+    }
+}
+
+.fullname {
+    border-bottom: 8px solid black;
+    padding: 0 1rem 1rem 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    .firstname,
+    .lastname {
+        overflow: hidden;
+        p {
+            position: relative;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 4.5rem;
+        }
+    }
+}
+
+.slider-details-links-container {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    height: 70vh;
+    width: 52vw;
+    transform: translate(-50%, -50%);
+}
+
+.slider-container {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    height: 70vh;
+    width: 52vw;
+    transform: translate(-50%, -50%);
+    overflow-x: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    /*  @include respond(mq-1200) {
+        width: 64vw;
+    }
+
+    @include respond(mq-992) {
+        width: 75vw;
+        height: 72vh;
+    }
+
+    @include respond(mq-768) {
+        width: 80vw;
+        height: 76vh;
+    }*/
+
+    .slider-grey-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(247, 247, 247);
+        z-index: 10;
+        left: -100%;
+    }
+
+    .slider-img-background {
+        width: 100%;
+        height: 100%;
+        background-image: url("http://whydesign.ie/wp-content/uploads/2018/02/IMG_7907_edit-1920x1371.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.slider-nav {
+    position: absolute;
+    left: 50%;
+    bottom: 5vh;
+    width: 100%;
+    transform: translateX(-50%);
+    justify-content: center;
+    display: flex;
+    align-items: baseline;
+
+    .slider-left-arrow,
+    .slider-right-arrow {
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    .slider-counter-container {
+        font-size: 1.8rem;
+
+        margin: 0 2.5rem;
+
+        .slider-counter {
+            display: flex;
+        }
+
+        .slider-count-number {
+            font-weight: 900;
+        }
+
+        .slider-counter-container-of {
+            margin: 0 1rem;
+            font-family: "Fanwood Text", serif;
+        }
+    }
+}
+
+.fa-arrow-left,
+.fa-arrow-right {
+    font-size: 2rem;
+    color: $mid-grey;
+}

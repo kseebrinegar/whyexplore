@@ -16,6 +16,11 @@
             @content;
         }
     }
+    @if $breakpoint == mq-1200 {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
     @if $breakpoint == mq-1500 {
         @media (min-width: 1500px) {
             @content;

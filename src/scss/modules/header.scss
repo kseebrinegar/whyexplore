@@ -1,5 +1,11 @@
 @import "../mixins/mixins";
 
+header {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
 .header {
     .why-explore-black-img,
     .why-explore-white-img,
@@ -171,19 +177,4 @@
             width: 0rem;
         }
     }
-}
-
-body {
-    overflow-x: hidden;
-}
-
-.home {
-    height: 2000px;
-    width: 100%;
-}
-
-.footer {
-    height: 800px;
-    width: 100%;
-    background: black;
 }
