@@ -1,0 +1,284 @@
+.details {
+    z-index: 100;
+}
+
+.home {
+    .details {
+        position: absolute;
+        top: 45%;
+        left: -7rem;
+        transform: translate(0%, -50%);
+
+        @include respond(mq-992) {
+            left: -4rem;
+            top: 30%;
+        }
+
+        @include respond(mq-768) {
+            top: 20%;
+            left: -3rem;
+        }
+
+        .persons-profession-animate {
+            animation: animate-profession-animate 1s
+                cubic-bezier(0.46, 0.02, 0.36, 1.04) 0s forwards 1;
+        }
+
+        @keyframes animate-profession-animate {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.persons-profession {
+    font-size: 2.4rem;
+    font-family: "Fanwood Text", serif;
+
+    @include respond(mq-1200) {
+        font-size: 2.2rem;
+    }
+
+    @include respond(mq-768) {
+        font-size: 2rem;
+    }
+}
+
+.fullname {
+    margin-bottom: 2rem;
+    width: 100%;
+
+    @include respond(mq-1200) {
+        margin-bottom: 1.5rem;
+    }
+
+    .firstname,
+    .lastname {
+        padding: 0 1rem 0 0;
+        overflow: hidden;
+        p {
+            position: relative;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 4.5rem;
+
+            @include respond(mq-1200) {
+                font-size: 3.6rem;
+                line-height: 4rem;
+            }
+
+            @include respond(mq-768) {
+                font-size: 3.4rem;
+                line-height: 3.5rem;
+            }
+        }
+    }
+
+    .firstname-animation {
+        -webkit-animation: animate-first-name 0.6s
+            cubic-bezier(0.46, 0.02, 0.36, 1.04) 0.6s forwards;
+        -moz-animation: animate-first-name 0.5s
+            cubic-bezier(0.46, 0.02, 0.36, 1.04) 0.6s forwards;
+        -o-animation: animate-first-name 0.5s
+            cubic-bezier(0.46, 0.02, 0.36, 1.04) 0.6s forwards;
+        animation: animate-first-name 0.6s cubic-bezier(0.46, 0.02, 0.36, 1.04)
+            0s forwards;
+    }
+
+    .lastname-animation {
+        -webkit-animation: animate-last-name 0.75s
+            cubic-bezier(0.46, 0.02, 0.36, 1.04) 0s forwards;
+        -moz-animation: animate-last-name 0.75s
+            cubic-bezier(0.46, 0.02, 0.36, 1.04) 0s forwards;
+        -o-animation: animate-last-name 0.75s
+            cubic-bezier(0.46, 0.02, 0.36, 1.04) 0s forwards;
+        animation: animate-last-name 0.75s cubic-bezier(0.46, 0.02, 0.36, 1.04)
+            0s forwards;
+    }
+
+    .fullname-line,
+    .fullname-line-animate {
+        margin-top: 1rem;
+        border-bottom: 8px solid black;
+        width: 100%;
+
+        @include respond(mq-992) {
+            margin-top: 0.5rem;
+            border-bottom: 5px solid black;
+        }
+    }
+
+    .fullname-line-animate {
+        -webkit-animation: animate-full-name-line 1s
+            cubic-bezier(0.46, 0.02, 0.36, 1.04) 0s forwards;
+        -moz-animation: animate-full-name-line 1s
+            cubic-bezier(0.46, 0.02, 0.36, 1.04) 0s forwards;
+        -o-animation: animate-full-name-line 1s
+            cubic-bezier(0.46, 0.02, 0.36, 1.04) 0s forwards;
+        animation: animate-full-name-line 1s
+            cubic-bezier(0.46, 0.02, 0.36, 1.04) 0s forwards;
+    }
+
+    @-webkit-keyframes animate-first-name {
+        0% {
+            transform: translateY(0%);
+        }
+        50% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @-moz-keyframes animate-first-name {
+        0% {
+            transform: translateY(0%);
+        }
+        50% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @-o-keyframes animate-first-name {
+        0% {
+            transform: translateY(0%);
+        }
+        50% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes animate-first-name {
+        0% {
+            transform: translateY(0%);
+        }
+        50% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @-webkit-keyframes animate-last-name {
+        0% {
+            transform: translateY(0%);
+        }
+        25% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @-moz-keyframes animate-last-name {
+        0% {
+            transform: translateY(0%);
+        }
+        25% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @-o-keyframes animate-last-name {
+        0% {
+            transform: translateY(0%);
+        }
+        25% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes animate-last-name {
+        0% {
+            transform: translateY(0%);
+        }
+        25% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @-webkit-keyframes animate-full-name-line {
+        0% {
+            width: 100%;
+        }
+        25% {
+            width: 0%;
+        }
+        50% {
+            width: 0%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+    @-moz-keyframes animate-full-name-line {
+        0% {
+            width: 100%;
+        }
+        25% {
+            width: 0%;
+        }
+        50% {
+            width: 0%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+    @-o-keyframes animate-full-name-line {
+        0% {
+            width: 100%;
+        }
+        25% {
+            width: 0%;
+        }
+        50% {
+            width: 0%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+    @keyframes animate-full-name-line {
+        0% {
+            width: 100%;
+        }
+        25% {
+            width: 0%;
+        }
+        50% {
+            width: 0%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+}

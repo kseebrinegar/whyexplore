@@ -28,10 +28,9 @@ class Home extends React.Component<{}, IState> {
         isLastNameAnimated: false,
         isPersonsProfessionAnimated: false,
         isReadMoreAnimated: false,
-        currentPersonsImg:
-            "url('http://whydesign.ie/wp-content/uploads/2018/02/IMG_7907_edit-1920x1371.jpg')",
-        currentPersonsFirstName: "Emma",
-        currentPersonsLastName: "Manley.",
+        currentPersonsImg: "url(/img/girlone.jpg)",
+        currentPersonsFirstName: "Ashley",
+        currentPersonsLastName: "Burgarn.",
         currentPersonsProfession: "Fasion Designer"
     };
 
@@ -94,31 +93,27 @@ class Home extends React.Component<{}, IState> {
     public getNextPersonsInfo = (slideCount: number): IPersonsInfo => {
         const peoplesInfo = [
             {
-                picture:
-                    "url('http://whydesign.ie/wp-content/uploads/2018/02/IMG_7907_edit-1920x1371.jpg')",
-                firstName: "Emma",
-                lastName: "Manley.",
+                picture: "url(/img/girlone.jpg)",
+                firstName: "Ashley",
+                lastName: "Burgarn.",
                 profession: "Fasion Desinger"
             },
             {
-                picture:
-                    "url('http://whydesign.ie/wp-content/uploads/2018/02/IMG_7806_edit-1920x1371.jpg')",
-                firstName: "Aoife",
+                picture: "url(/img/guyone.jpg)",
+                firstName: "Adam",
                 lastName: "Dooley.",
                 profession: "Illustrator"
             },
             {
-                picture:
-                    "url(http://whydesign.ie/wp-content/uploads/2018/02/IMG_8047_edit2-1920x1371.jpg",
-                firstName: "Chupi",
-                lastName: "Sweetman.",
+                picture: "url(/img/girltwo.jpg)",
+                firstName: "Verna",
+                lastName: "Tilmen.",
                 profession: "Jewellery Designer"
             },
             {
-                picture:
-                    "url(http://whydesign.ie/wp-content/uploads/2018/02/IMG_8713_edit-1920x1372.jpg)",
-                firstName: "Mary",
-                lastName: "Doherty.",
+                picture: "url(/img/guytwo.jpg)",
+                firstName: "Mark",
+                lastName: "Dougan.",
                 profession: "Graphic Desinger"
             }
         ];
@@ -260,114 +255,3 @@ class Home extends React.Component<{}, IState> {
 }
 
 export default Home;
-
-/*<div className="slider-container">
-    <div className="slider">
-        <div
-            className={
-                this.state.isGreySliderAnimated
-                    ? "slider-grey-background animate-grey-background"
-                    : "slider-grey-background"
-            }
-        />
-        <div
-            style={{
-                backgroundImage: this.state
-                    .currentPersonsImg
-            }}
-            className="slider-img-background"
-        />
-    </div>
-    <div className="details">
-        <div className="fullname">
-            <div className="firstname">
-                <p
-                    className={
-                        this.state.isFirstNameAnimated
-                            ? "firstname-animation"
-                            : " "
-                    }
-                >
-                    {this.state.currentPersonsFirstName}
-                </p>
-            </div>
-            <div className="lastname">
-                <p
-                    className={
-                        this.state.isLastNameAnimated
-                            ? "lastname-animation"
-                            : " "
-                    }
-                >
-                    {this.state.currentPersonsLastName}
-                </p>
-            </div>
-            <div
-                className={
-                    this.state.isFullNameLineAnimated
-                        ? "fullname-line-animate"
-                        : "fullname-line"
-                }
-            />
-        </div>
-        <p
-            className={
-                this.state.isPersonsProfessionAnimated
-                    ? "persons-profession persons-profession-animate"
-                    : "persons-profession"
-            }
-        >
-            {this.state.currentPersonsProfession}
-        </p>
-    </div>
-    <Link
-        to="/"
-        className={
-            this.state.isReadMoreAnimated
-                ? "read-more-animate"
-                : "read-more"
-        }
-    >
-        <p className="read-more-text">READ MORE</p>
-        <p
-            className={
-                this.state.isReadMoreAnimated
-                    ? "read-more-line--no-width"
-                    : "read-more-line"
-            }
-        />
-    </Link>
-</div>
-                </div >
-    <div className="slider-nav">
-        <div
-            onClick={this.nextSliderOrPrevSlider}
-            data-click-arrow="left"
-            className="slider-left-arrow"
-        >
-            <i
-                className="fa fa-fw fa-arrow-left"
-                aria-hidden="true"
-            />
-        </div>
-        <div className="slider-counter-container">
-            <p className="slider-counter">
-                <span className="slider-count-number">
-                    0{this.state.currentSlideCount}
-                </span>
-                <span className="slider-counter-container-of">
-                    of
-                            </span>
-                <span className="slider-count-number">04</span>
-            </p>
-        </div>
-        <div
-            onClick={this.nextSliderOrPrevSlider}
-            data-click-arrow="right"
-            className="slider-right-arrow"
-        >
-            <i
-                className="fa fa-fw fa-arrow-right"
-                aria-hidden="true"
-            />
-        */
