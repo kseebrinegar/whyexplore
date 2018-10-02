@@ -1,7 +1,7 @@
 import * as React from "react";
 
 interface ISFCDetailsProps {
-    details?: {
+    details: {
         firstName: {
             class: string;
             name: string;

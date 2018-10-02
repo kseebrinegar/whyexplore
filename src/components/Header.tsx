@@ -12,7 +12,7 @@ class Header extends React.Component<{}, IState> {
     constructor(props: {}) {
         super(props);
     }
-    public toggleSiteNav = (e: React.MouseEvent<HTMLButtonElement>) => {
+    public toggleSiteNav = () => {
         this.setState(prevState => {
             return {
                 isSiteNavOpen: prevState.isSiteNavOpen === true ? false : true
@@ -60,6 +60,7 @@ class Header extends React.Component<{}, IState> {
                 {navListItems.map(itemName => {
                     return (
                         <Link
+                            onClick={this.toggleSiteNav}
                             to={itemName.url}
                             className={itemName.className}
                             key={uuid()}

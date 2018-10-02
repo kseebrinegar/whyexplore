@@ -21,8 +21,8 @@
             @content;
         }
     }
-    @if $breakpoint == mq-1500 {
-        @media (min-width: 1500px) {
+    @if $breakpoint == mq-1400 {
+        @media (min-width: 1400px) {
             @content;
         }
     }

@@ -14,10 +14,10 @@ const Router: React.SFC = (): JSX.Element => {
             <React.Fragment>
                 <Header />
                 <Switch>
-                    <Route to="/" component={Home} />
-                    <Route to="/interviews" component={InterViews} />
-                    <Route to="/about" component={About} />
-                    <Route to="/courses" component={Courses} />
+                    <Route path="/about" exact={true} component={About} />
+                    <Route path="/courses" component={Courses} />
+                    <Route path="/interviews" component={InterViews} />
+                    <Route path="/" component={Home} />
                 </Switch>
                 <Footer />
             </React.Fragment>

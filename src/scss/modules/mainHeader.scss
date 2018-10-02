@@ -1,0 +1,135 @@
+.main-header-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(mq-992) {
+        height: 60vh;
+    }
+
+    h1 {
+        font-size: 12vw;
+        font-weight: 700;
+    }
+}
+
+section {
+    display: block;
+    height: 1400px;
+    width: 100%;
+}
+
+.interviews {
+    padding: 0 10.5rem;
+
+    @include respond(mq-992) {
+        padding: 0 6.5rem;
+    }
+
+    @include respond(mq-768) {
+        padding: 0 4rem;
+    }
+}
+
+.interview-teaser-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include respond(mq-1400) {
+        align-items: flex-end;
+    }
+
+    @include respond(mq-768) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.interview-teaser-container:nth-child(odd) {
+    padding-left: 10rem;
+
+    @include respond(mq-1200) {
+        padding-left: 1.5rem;
+    }
+
+    @include respond(mq-768) {
+        padding-left: 0rem;
+    }
+}
+
+.interview-teaser-container:nth-child(even) {
+    padding-right: 10rem;
+}
+
+.interview-teaser-img-container {
+    width: 55%;
+    z-index: 101;
+
+    @include respond(mq-1200) {
+        width: 67%;
+    }
+
+    @include respond(mq-768) {
+        width: 100%;
+    }
+
+    img {
+        display: block;
+        width: 95%;
+
+        @include respond(mq-768) {
+            width: 100%;
+        }
+    }
+}
+
+.interviews-details-and-readmore-container {
+    width: 45%;
+    padding-left: 8rem;
+
+    @include respond(mq-1400) {
+        margin-bottom: 7.5rem;
+        padding-left: 14rem;
+    }
+
+    @include respond(mq-1200) {
+        align-self: flex-end;
+        margin-bottom: 2rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(mq-992) {
+        padding-left: 7%;
+    }
+
+    @include respond(mq-768) {
+        padding-left: 0;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .details-container1 {
+        width: 16.5rem;
+
+        @include respond(mq-1200) {
+            width: 15rem;
+        }
+
+        @include respond(mq-768) {
+            width: 14rem;
+        }
+    }
+}
+
+.details-container1 {
+    margin-bottom: 6rem;
+
+    @include respond(mq-1200) {
+        margin-bottom: 4rem;
+    }
+}
