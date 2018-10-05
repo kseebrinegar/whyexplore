@@ -1,0 +1,260 @@
+.interviews-container {
+    overflow: hidden;
+}
+
+.interview-teaser {
+    position: relative;
+    width: 100%;
+    padding: 0 20.5rem;
+    display: flex;
+    align-items: center;
+
+    @include respond(mq-1200) {
+        padding: 0 12.5rem 0rem 12.5rem;
+    }
+
+    @include respond(mq-992) {
+        padding: 0 8.2rem 0rem 8.2rem;
+    }
+
+    @include respond(mq-768) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0rem 4.1rem 0rem 4.1rem;
+    }
+
+    .interview-teaser-img-container {
+        @include respond(mq-768) {
+            order: -1;
+        }
+    }
+}
+
+.interview-teaser:nth-child(even)
+    .interviews-details-and-readmore-outer-container {
+    order: -1;
+
+    @include respond(mq-768) {
+        order: 1;
+    }
+}
+
+.interview-teaser:nth-child(even) {
+    background: rgb(247, 247, 247);
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+
+    @include respond(mq-1400) {
+        padding-top: 25rem;
+        padding-bottom: 25rem;
+    }
+
+    @include respond(mq-992) {
+        padding-top: 15rem;
+        padding-bottom: 15rem;
+    }
+
+    @include respond(mq-768) {
+        padding-top: 5.5rem;
+        padding-bottom: 5.5rem;
+        background: white;
+    }
+}
+
+.interview-teaser:nth-child(1) {
+    top: 6.8rem;
+
+    @include respond(mq-1400) {
+        top: 10.3rem;
+    }
+
+    @include respond(mq-1200) {
+        top: 4.9rem;
+    }
+
+    @include respond(mq-768) {
+        top: 0rem;
+    }
+}
+
+.interview-teaser:nth-child(3) {
+    top: -6.8rem;
+
+    @include respond(mq-1400) {
+        top: -10.3rem;
+    }
+
+    @include respond(mq-1200) {
+        top: -4.9rem;
+    }
+
+    @include respond(mq-768) {
+        top: 0;
+    }
+}
+
+.interview-teaser:nth-child(4) {
+    margin-top: -13.5rem;
+    // padding-top: 20rem;
+
+    @include respond(mq-1400) {
+        top: -20.5rem;
+        // padding-top: 25rem;
+    }
+
+    @include respond(mq-1200) {
+        margin-top: -9.8rem;
+    }
+
+    @include respond(mq-768) {
+        margin-top: 0;
+        // padding-top: 5.5rem;
+    }
+}
+
+.interview-teaser-img-container {
+    width: 59%;
+    z-index: 101;
+    position: relative;
+
+    @include respond(mq-992) {
+        width: 57%;
+    }
+
+    @include respond(mq-768) {
+        width: 100%;
+    }
+}
+
+.interview-teaser-img-container img {
+    width: 100%;
+    display: block;
+}
+
+.interviews-details-and-readmore-outer-container {
+    width: 41%;
+    align-self: stretch;
+    position: relative;
+
+    z-index: 100;
+
+    @include respond(mq-992) {
+        width: 43%;
+    }
+
+    @include respond(mq-768) {
+        width: 100%;
+    }
+}
+
+.interview-teaser:nth-child(even)
+    .interviews-details-and-readmore-inner-container {
+    position: absolute;
+    bottom: 4rem;
+    right: 60%;
+    transform: translateX(50%);
+
+    @include respond(mq-1400) {
+        bottom: 7.5em;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    @include respond(mq-1200) {
+        bottom: 2.5rem;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    @include respond(mq-768) {
+        position: static;
+        transform: none;
+    }
+
+    .details-container {
+        margin: 4.5rem 0;
+
+        @include respond(mq-768) {
+            margin: 2rem 0 3.5rem 0;
+        }
+    }
+}
+
+.interviews-details-and-readmore-inner-container {
+    position: absolute;
+    bottom: 4rem;
+    right: 0;
+
+    @include respond(mq-1400) {
+        bottom: 7.5em;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    @include respond(mq-1200) {
+        bottom: 2.5rem;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    @include respond(mq-768) {
+        position: static;
+        transform: none;
+    }
+
+    .details-container {
+        margin: 4.5rem 0;
+
+        @include respond(mq-768) {
+            margin: 2rem 0 3.5rem 0;
+        }
+    }
+
+    .details-container1 {
+        width: 16.5rem;
+
+        @include respond(mq-1200) {
+            width: 14.7rem;
+        }
+
+        @include respond(mq-768) {
+            width: 14rem;
+        }
+    }
+
+    .details-container2 {
+        width: 14.1rem;
+
+        @include respond(mq-1200) {
+            width: 12.7rem;
+        }
+
+        @include respond(mq-768) {
+            width: 12rem;
+        }
+    }
+
+    .details-container3 {
+        width: 17rem;
+
+        @include respond(mq-1200) {
+            width: 16rem;
+        }
+
+        @include respond(mq-768) {
+            width: 14.2rem;
+        }
+    }
+
+    .details-container4 {
+        width: 16.1rem;
+
+        @include respond(mq-1200) {
+            width: 14.9rem;
+        }
+
+        @include respond(mq-768) {
+            width: 13.4rem;
+        }
+    }
+}

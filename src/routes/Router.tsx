@@ -1,7 +1,6 @@
 import * as React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Footer from "../components/footer";
 import Header from "../components/Header";
 import About from "../components/pages/About";
 import Courses from "../components/pages/Courses";
@@ -19,7 +18,6 @@ const Router: React.SFC = (): JSX.Element => {
                     <Route path="/interviews" component={InterViews} />
                     <Route path="/" component={Home} />
                 </Switch>
-                <Footer />
             </React.Fragment>
         </BrowserRouter>
     );

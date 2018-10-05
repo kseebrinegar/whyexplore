@@ -1,0 +1,72 @@
+footer {
+    background: black;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 13rem;
+
+    @include respond(mq-992) {
+        padding: 0 8rem;
+    }
+
+    @include respond(mq-768) {
+        padding: 0 4rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+.copyright {
+    color: white;
+    font-family: "Fanwood Text", serif;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+
+    @include respond(mq-1200) {
+        font-size: 1.4rem;
+    }
+
+    @include respond(mq-992) {
+        font-size: 1.2rem;
+    }
+
+    @include respond(mq-768) {
+        line-height: 1.75rem;
+    }
+}
+.social-media-icons {
+    color: white;
+    font-size: 2.6rem;
+    margin-left: auto;
+    display: flex;
+    cursor: pointer;
+
+    @include respond(mq-1200) {
+        font-size: 2.2rem;
+    }
+
+    @include respond(mq-992) {
+        font-size: 2rem;
+    }
+
+    @include respond(mq-768) {
+        margin-left: 0;
+        order: -1;
+        margin-bottom: 1.5rem;
+    }
+
+    i {
+        display: block;
+        margin-right: 0.5rem;
+    }
+
+    i:nth-child(3) {
+        margin-right: 0;
+    }
+
+    i:last-child {
+        margin-right: 0;
+    }
+}

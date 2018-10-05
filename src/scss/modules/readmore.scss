@@ -1,6 +1,6 @@
 .read-more,
 .read-more-animate {
-    z-index: 100;
+    z-index: 110;
     background: black;
     height: 5.5rem;
     width: 25rem;
@@ -62,21 +62,21 @@
     background: white;
     position: absolute;
     top: 48%;
-    left: -35%;
+    left: -25%;
     transform: translateY(-50%, 50%);
     transition: 0.3s;
     display: block;
 
     @include respond(mq-1200) {
-        left: -30%;
+        left: -20%;
     }
 }
 
 .read-more-line {
-    width: 18.75rem;
+    width: 17rem;
 
     @include respond(mq-1200) {
-        width: 16.5rem;
+        width: 15rem;
     }
 
     @include respond(mq-768) {
@@ -111,14 +111,14 @@
 
 .read-more:hover {
     .read-more-line {
-        width: 31.7rem;
+        width: 29.7rem;
 
         @include respond(mq-1200) {
-            width: 28.3rem;
+            width: 26rem;
         }
 
         @include respond(mq-768) {
-            width: 24.5rem;
+            width: 22.5rem;
         }
     }
 

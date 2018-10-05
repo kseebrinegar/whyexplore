@@ -1,70 +1,87 @@
 import * as React from "react";
-import Details from "../details/Details";
-import ReadMore from "../readmore/ReadMore";
-class Interviews extends React.Component {
-    public render() {
-        /*const peoplesInfo = [
-            {
-                picture: "url(/img/girlone.jpg)",
-                firstName: "Ashley",
-                lastName: "Burgarn.",
-                profession: "Fasion Desinger"
-            },
-            {
-                picture: "url(/img/guyone.jpg)",
-                firstName: "Adam",
-                lastName: "Dooley.",
-                profession: "Illustrator"
-            },
-            {
-                picture: "url(/img/girltwo.jpg)",
-                firstName: "Verna",
-                lastName: "Tilmen.",
-                profession: "Jewellery Designer"
-            },
-            {
-                picture: "url(/img/guytwo.jpg)",
-                firstName: "Mark",
-                lastName: "Dougan.",
-                profession: "Graphic Desinger"
-            }
-        ];*/
+import * as uuid from "uuid";
+import Footer from "../footer";
+import InterviewTeaser from "../interviewTeaser/InterviewTeaser";
 
-        const details1 = {
-            firstName: { class: "", name: "Ashley" },
-            lastName: { class: "", name: "Burgarn." },
-            fullNameClassLine: "fullname-line",
+const interviews = (): JSX.Element => {
+    const renderInterviewTeasersList = (): JSX.Element[] => {
+        interface IPeoplesDetails {
+            firstName: { class: string; name: string };
+            lastName: { class: string; name: string };
+            fullNameClassLine: string;
+            detailsContainerWidthClass: string;
+            img: string;
             personsProfession: {
-                class: "persons-profession",
-                name: "Fasion Desinger"
-            }
-        };
+                class: string;
+                name: string;
+            };
+        }
 
-        const readMore = {
-            isReadMoreAnimated: "read-more",
-            isReadMoreLineAnimated: "read-more-line"
-        };
-        return (
+        const peoplesDetails: IPeoplesDetails[] = [
+            {
+                firstName: { class: "", name: "Ashley" },
+                lastName: { class: "", name: "Burgarn." },
+                fullNameClassLine: "fullname-line",
+                detailsContainerWidthClass: "details-container1",
+                img: "/img/girlone.jpg",
+                personsProfession: {
+                    class: "persons-profession",
+                    name: "Fasion Desinger"
+                }
+            },
+            {
+                firstName: { class: "", name: "Adam" },
+                lastName: { class: "", name: "Dooley." },
+                fullNameClassLine: "fullname-line",
+                detailsContainerWidthClass: "details-container2",
+                img: "/img/guyone.jpg",
+                personsProfession: {
+                    class: "persons-profession",
+                    name: "Illustrator"
+                }
+            },
+            {
+                firstName: { class: "", name: "Verna" },
+                lastName: { class: "", name: "Tilmen." },
+                fullNameClassLine: "fullname-line",
+                detailsContainerWidthClass: "details-container3",
+                img: "/img/girltwo.jpg",
+                personsProfession: {
+                    class: "persons-profession",
+                    name: "Jewellery Designer"
+                }
+            },
+            {
+                firstName: { class: "", name: "Mark" },
+                lastName: { class: "", name: "Dougan." },
+                fullNameClassLine: "fullname-line",
+                detailsContainerWidthClass: "details-container4",
+                img: "/img/guytwo.jpg",
+                personsProfession: {
+                    class: "persons-profession",
+                    name: "Graphic Desinger"
+                }
+            }
+        ];
+
+        return peoplesDetails.map(item => {
+            return <InterviewTeaser key={uuid()} personsDetails={item} />;
+        });
+    };
+
+    return (
+        <React.Fragment>
             <main className="interviews">
                 <div className="main-header-container">
                     <h1>interviews.</h1>
                 </div>
                 <section className="interviews-container">
-                    <div className="interview-teaser-container">
-                        <div className="interview-teaser-img-container">
-                            <img src="/img/girlone.jpg" />
-                        </div>
-                        <div className="interviews-details-and-readmore-container">
-                            <div className="details-container1">
-                                <Details details={details1} />
-                            </div>
-                            <ReadMore readMore={readMore} />
-                        </div>
-                    </div>
+                    {renderInterviewTeasersList()}
                 </section>
+                <Footer />
             </main>
-        );
-    }
-}
+        </React.Fragment>
+    );
+};
 
-export default Interviews;
+export default interviews;
