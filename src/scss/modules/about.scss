@@ -1,13 +1,12 @@
 .about {
-    height: 4000px;
     width: 100%;
     overflow: hidden;
 }
 
-.about-intro {
+.about-intro,
+.about-ending {
     padding: 0 32rem;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,9 +21,13 @@
         }
     }
 
+    p:not(:last-child) {
+        margin-bottom: 2.5rem;
+    }
+
     @include respond(mq-1400) {
         padding: 0;
-        width: 60rem;
+        width: 50%;
         margin: 0 auto;
     }
 
@@ -33,11 +36,151 @@
     }
 
     @include respond(mq-992) {
-        height: 60vh;
         padding: 0 16rem 0rem 16rem;
     }
 
     @include respond(mq-768) {
+        padding: 4.1rem 4.1rem 0rem 4.1rem;
+    }
+}
+
+.about-intro {
+    height: 100vh;
+    @include respond(mq-768) {
+        height: 60vh;
+    }
+}
+
+.about-ending {
+    margin-bottom: 15rem;
+}
+
+.why-whyexplore-container {
+    .about-box {
+        right: 0;
+    }
+}
+
+.whyexplore-is-container {
+    .about-box {
+        left: 0;
+
+        @include respond(mq-992) {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+
+.why-whyexplore-container,
+.whyexplore-is-container {
+    padding: 15rem 12.5rem 0rem 12.5rem;
+    margin-bottom: 15rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include respond(mq-992) {
+        padding: 0rem 8.2rem 0rem 8.2rem;
+        margin-top: 5rem;
+    }
+
+    @include respond(mq-768) {
         padding: 0rem 4.1rem 0rem 4.1rem;
+    }
+
+    .about-box {
+        background: rgb(247, 247, 247);
+        height: 60vh;
+        width: 60%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+
+        @include respond(mq-992) {
+            height: 85vh;
+            width: 50%;
+            top: 20%;
+        }
+    }
+}
+
+.whyexplore-is,
+.why-whyexplore {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    @include respond(mq-992) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    p {
+        margin-top: 2.5rem;
+    }
+
+    .why-whyexplore-para,
+    .whyexplore-is-para {
+        flex-basis: 50%;
+    }
+
+    .why-whyexplore-gif,
+    .whyexplore-is-gif {
+        flex-basis: 50%;
+
+        @include respond(mq-992) {
+            margin-top: 5rem;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.why-whyexplore {
+    .why-whyexplore-para {
+        padding-right: 2.5rem;
+
+        @include respond(mq-1400) {
+            padding-right: 10rem;
+        }
+
+        @include respond(mq-992) {
+            padding-right: 0rem;
+        }
+    }
+
+    .why-whyexplore-gif {
+        padding-left: 2.5rem;
+
+        @include respond(mq-992) {
+            padding-left: 0;
+        }
+    }
+}
+
+.whyexplore-is {
+    .whyexplore-is-para {
+        padding-left: 2.5rem;
+
+        @include respond(mq-1400) {
+            padding-left: 12rem;
+        }
+
+        @include respond(mq-992) {
+            padding-left: 0rem;
+            order: -1;
+        }
+    }
+
+    .whyexplore-is-gif {
+        padding-right: 2.5rem;
+
+        @include respond(mq-992) {
+            padding-right: 0;
+        }
     }
 }
